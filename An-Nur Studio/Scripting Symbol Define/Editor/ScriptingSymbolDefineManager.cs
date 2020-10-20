@@ -20,15 +20,10 @@ using System.Text;
 using UnityEditor;
 
 
-public class ScriptingSymbolDefineManager
+public static class ScriptingSymbolDefineManager
 {
-    public static string[] DefinedSymbolsOnCurrentPlatform = PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildPipeline.GetBuildTargetGroup(EditorUserBuildSettings.activeBuildTarget)).Split(';');
+    public static string[] DefinedSymbolsOnCurrentPlatform => PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildPipeline.GetBuildTargetGroup(EditorUserBuildSettings.activeBuildTarget)).Split(';');
     
-    private ScriptingSymbolDefineManager()
-    {
-
-    }
-
     /// <summary>
     /// Define symbol
     /// </summary>
