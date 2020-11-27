@@ -19,7 +19,6 @@ using System.Linq;
 using System.Text;
 using UnityEditor;
 
-
 public static class ScriptingSymbolDefineManager
 {
     public static string[] DefinedSymbolsOnCurrentPlatform => PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildPipeline.GetBuildTargetGroup(EditorUserBuildSettings.activeBuildTarget)).Split(';');
